@@ -602,7 +602,7 @@ const ListCar=()=>{
   return(
 
     <View style={styles.container}>
-    <Text style={{fontSize:20,fontWeight:'bold',textTransform:'capitalize'}}>El botón negro le mostrara los carros no disponibles y el botón verde los disponibles</Text>
+    <Text style={{fontSize:20,fontWeight:'bold',textTransform:'capitalize'}}>El botón azul le mostrará los carros no disponibles y el botón verde los disponibles</Text>
 
       <FlatList 
         data={listaCarros}

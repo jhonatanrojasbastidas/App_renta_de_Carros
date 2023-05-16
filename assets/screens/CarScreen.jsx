@@ -8,12 +8,8 @@ import { useForm, Controller } from "react-hook-form";
 const cars=[{platenumber:'AAA111',brand:'MAZDA',state:true},
             {platenumber:'BBB222',brand:'BMW',state:true}]
 
-            
-
+          
 const CarScreen=()=>{
-
-    
-    
 
     const [errormessage,setErrorMessage]=useState('');
     const { control, handleSubmit, formState: { errors } } = useForm({
@@ -62,7 +58,7 @@ const CarScreen=()=>{
         }}
         render={({ field: { onChange, onBlur, value } }) => (
           <TextInput
-            placeholder="Plate Number"
+            placeholder="Placa"
             onBlur={onBlur}
             onChangeText={onChange}
             value={value}
@@ -84,7 +80,7 @@ const CarScreen=()=>{
         }}
         render={({ field: { onChange, onBlur, value } }) => (
           <TextInput
-            placeholder="Brand"
+            placeholder="Marca"
             onBlur={onBlur}
             onChangeText={onChange}
             value={value}
@@ -97,7 +93,7 @@ const CarScreen=()=>{
        {errors.brand?.type==="pattern" && <Text>La Marca solo permite letras</Text>}
    
 
-      <Button buttonColor='black' style={{marginTop:10}}  mode="contained" title="Submit" onPress={handleSubmit(onSubmit)}> GUARDAR</Button>
+      <Button buttonColor='#0066ff' style={{marginTop:10}}  mode="contained" title="Submit" onPress={handleSubmit(onSubmit)}> GUARDAR</Button>
     </View>
     )
 }
